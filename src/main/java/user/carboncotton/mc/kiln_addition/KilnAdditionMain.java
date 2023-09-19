@@ -1,6 +1,7 @@
 package user.carboncotton.mc.kiln_addition;
 
 import net.fabricmc.api.ModInitializer;
+import user.carboncotton.mc.kiln_addition.content.AllObjects;
 
 
 public class KilnAdditionMain implements ModInitializer {
@@ -10,5 +11,6 @@ public class KilnAdditionMain implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		AllObjects.init(MOD_ID);
 	}
 }
