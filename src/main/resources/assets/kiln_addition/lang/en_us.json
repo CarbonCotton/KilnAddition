@@ -1,0 +1,7 @@
+{
+  "block.kiln_addition.kiln":     "Kiln",
+  "container.kiln_addition.kiln": "Kiln",
+
+  "stat.kiln_addition.interact_with_kiln": "Interactions with Kiln",
+  "gui.kiln_addition.recipebook.toggleRecipes.fireable": "Showing Fireable"
+}
