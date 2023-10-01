@@ -13,7 +13,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.slf4j.LoggerFactory;
 
 public class KilnBlock extends AbstractFurnaceBlock {
 	protected KilnBlock(Settings settings) {
@@ -66,11 +65,11 @@ public class KilnBlock extends AbstractFurnaceBlock {
 
 
 		double centerX = (double)pos.getX() + 0.5;
-		double centerY = (double)pos.getY();
+		double centerY = pos.getY();
 		double centerZ = (double)pos.getZ() + 0.5;
 
 
-		Direction direction = (Direction)state.get(FACING);
+		Direction direction = state.get(FACING);
 		Direction.Axis axis = direction.getAxis();
 
 
