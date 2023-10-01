@@ -60,6 +60,12 @@ public class KilnBlock extends AbstractFurnaceBlock {
 			return;
 		}
 
+		// only 25% chance to spawn particle
+		if(random.nextDouble() > 0.25) {
+			return;
+		}
+
+
 
 		double centerX = (double)pos.getX() + 0.5;
 		double centerY = (double)pos.getY();
@@ -70,15 +76,19 @@ public class KilnBlock extends AbstractFurnaceBlock {
 		Direction.Axis axis = direction.getAxis();
 
 
-		double offsetY = 0.55;
+		double randomOffset = random.nextDouble() * 0.65 - 0.3;
+
+
+
+		double offsetY = 0.23;
 
 		double offsetX = (axis == Direction.Axis.X) ?
 				direction.getOffsetX() * 0.52 :
-				0;
+				randomOffset;
 
 		double offsetZ = (axis == Direction.Axis.Z) ?
 				direction.getOffsetZ() * 0.52 :
-				0;
+				randomOffset;
 
 
 		world.addParticle(
@@ -86,7 +96,7 @@ public class KilnBlock extends AbstractFurnaceBlock {
 				centerX + offsetX,
 				centerY + offsetY,
 				centerZ + offsetZ,
-				0, 0,0
+				0, 0.03,0
 		);
 	}
 }
