@@ -8,6 +8,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.LoggerFactory;
@@ -50,5 +51,12 @@ public class KilnBlock extends AbstractFurnaceBlock {
 		player.incrementStat(AllObjects.INTERACT_WITH_KILN_STAT);
 	}
 
+	@Override
+	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+		// only lit kiln can make noise/effects
+		if(!state.get(LIT)) {
+			return;
+		}
 
+	}
 }
