@@ -24,8 +24,6 @@ public class KilnBlock extends AbstractFurnaceBlock {
 
 	@Override
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-		LoggerFactory.getLogger("basic_kiln").info("Kiln entity created");
-
 
 		return new KilnBlockEntity(pos, state);
 	}
