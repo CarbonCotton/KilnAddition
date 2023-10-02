@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+
+  "key": {
+    "X": {
+      "item": "minecraft:furnace"
+    },
+    "|": {
+      "item": "minecraft:brick"
+    },
+    "#": {
+      "item": "minecraft:bricks"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+
+  "pattern": [
+    "#S|",
+    "SX|",
+    "#S|"
+  ],
+
+  "result": {
+    "item": "kiln_addition:kiln"
+  },
+
+  "show_notification": true
+
+}
