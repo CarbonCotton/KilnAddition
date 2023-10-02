@@ -93,7 +93,7 @@ public class KilnBlock extends AbstractFurnaceBlock {
 				centerX + offsetX,
 				centerY + offsetY,
 				centerZ + offsetZ,
-				0, 0.03,0
+				0, 0.035,0
 		);
 	}
 }
